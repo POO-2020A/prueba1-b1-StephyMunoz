@@ -26,11 +26,24 @@ aCrObAtIcS
 
 PISTA: Necesitaras una sentencia if dentro del for! 
 */
-class MixedCase {
-  public static void main(String[] args) {
-    Scanner inp = new Scanner(System.in);
-    System.out.print("In:");
-    String s = inp.nextLine();
-    //write your code below
-  }
+public class MixedCase {
+
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("In: ");
+        String s = inp.nextLine();
+        for (int i = 0; i < s.length(); i++) {
+            if (i % 2 == 0) {
+                String n = s.substring(i, i + 1);
+                String min = n.toLowerCase();
+                System.out.print(min);
+            } else {
+                String j = s.substring(i, i + 1);
+                String may = j.toUpperCase();
+                System.out.print(may);
+            }
+        }
+    }
+
 }
