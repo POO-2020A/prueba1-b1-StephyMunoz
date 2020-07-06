@@ -19,13 +19,59 @@ rats live on no evil star
 
 El programa debe imprimir true si es un palindromo y false si no lo es.
 */
-class Palindrome {
-  public static void main(String[] args) {
-    Scanner inp = new Scanner(System.in);
-    System.out.print("In:");
-    String s = inp.nextLine();
-   	//write your code below
-   	
-   	
-  }
+public class Palindrome {
+
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        System.out.print("In: ");
+        boolean flag = false;
+        String s = inp.nextLine();
+        //s.replace(" ","" );
+        String s2 = "";
+        String s1 = "";
+        for (int i = 0; i < s.length(); i++) {
+            if ((s.charAt(i)) == 'a') {
+                s1 = s.replace('á', 'a');
+                s2 = s2 + s1;
+            }
+            if ((s.charAt(i)) == 'A') {
+                s1 = s.replace('A', 'a');
+                s2 = s2 + s1;
+            }
+            if ((s.charAt(i)) == 'B') {
+                s1 = s.replace('B', 'b');
+                s2 = s2 + s1;
+            }
+            if ((s.charAt(i)) == 'S') {
+                s1 = s.replace('S', 's');
+                s2 = s2 + s1;
+            }
+            if ((s.charAt(i)) == 'ú') {
+                s1 = s.replace('u', 'u');
+                s2 = s2 + s1;
+            }
+            if ((s.charAt(i)) == 'I') {
+                s1 = s.replace('I', 'i');
+                s2 = s2 + s1;
+            }
+            if ((s.charAt(i)) == '.') {
+                s1 += s.replace('.', '');
+            }
+            if ((s.charAt(i)) == ',') {
+                s1 += s.replace(',', '');
+            }
+            
+       }
+        
+        String reverse = "";
+        for (int i = s2.length() - 1; i >= 0; i--) {
+            reverse += s2.charAt(i);
+        }
+        if (s2.equals(reverse)) {
+            flag = true;
+        }
+        System.out.println(flag);
+
+    }
+
 }
