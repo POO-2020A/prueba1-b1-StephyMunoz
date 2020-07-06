@@ -56,9 +56,11 @@ public class Palindrome {
             }
             if ((s.charAt(i)) == '.') {
                 s1 += s.replace('.', '');
+                s2 = s2 + s1;
             }
             if ((s.charAt(i)) == ',') {
                 s1 += s.replace(',', '');
+                s2 = s2 + s1;
             }
             
        }
