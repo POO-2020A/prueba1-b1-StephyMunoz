@@ -23,7 +23,7 @@ public class Palindrome {
 
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        System.out.print("In: ");
+        System.out.print("In:");
         boolean flag = false;
         String s = inp.nextLine();
         //s.replace(" ","" );
@@ -31,35 +31,35 @@ public class Palindrome {
         String s1 = "";
         for (int i = 0; i < s.length(); i++) {
             if ((s.charAt(i)) == 'a') {
-                s1 = s.replace('á', 'a');
+                s1 = s.replace("á", "a");
                 s2 = s2 + s1;
             }
             if ((s.charAt(i)) == 'A') {
-                s1 = s.replace('A', 'a');
+                s1 = s.replace("A", "a");
                 s2 = s2 + s1;
             }
             if ((s.charAt(i)) == 'B') {
-                s1 = s.replace('B', 'b');
+                s1 = s.replace("B", "b");
                 s2 = s2 + s1;
             }
             if ((s.charAt(i)) == 'S') {
-                s1 = s.replace('S', 's');
+                s1 = s.replace("S", "s");
                 s2 = s2 + s1;
             }
             if ((s.charAt(i)) == 'ú') {
-                s1 = s.replace('u', 'u');
+                s1 = s.replace("u", "u");
                 s2 = s2 + s1;
             }
             if ((s.charAt(i)) == 'I') {
-                s1 = s.replace('I', 'i');
+                s1 = s.replace("I", "i");
                 s2 = s2 + s1;
             }
             if ((s.charAt(i)) == '.') {
-                s1 += s.replace('.', '');
+                s1 += s.replace(".", "");
                 s2 = s2 + s1;
             }
             if ((s.charAt(i)) == ',') {
-                s1 += s.replace(',', '');
+                s1 += s.replace(",", "");
                 s2 = s2 + s1;
             }
             
